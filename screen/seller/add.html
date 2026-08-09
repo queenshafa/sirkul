@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ReValue — Tambah Informasi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../src/output.css">
+
+</head>
+
+<body class="min-h-screen text-[#202421] bg-[#F7F8F6] font-poppins">
+
+<!-- =====================================================
+     DESKTOP SIDEBAR
+     ===================================================== -->
+
+<aside class="fixed inset-y-0 left-0 z-40 hidden w-[220px] flex-col border-r border-[#E4E7E3] bg-white lg:flex">
+
+    <!-- Logo -->
+
+    <div class="flex h-[76px] items-center border-b border-[#E4E7E3] px-6">
+        <a href="dasboard.html" class="flex items-center gap-2.5">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10l-2-3M17 7l-2 3M17 17H7l2 3M7 17l2-3"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12a7 7 0 0 1 2-5M19 12a7 7 0 0 1-2 5"/>
+                </svg>
+            </div>
+
+            <div>
+                <p class="text-[15px] font-semibold tracking-[-0.02em]">ReValue</p>
+                <p class="text-[9px] font-medium uppercase tracking-[0.14em] text-[#8A908B]">Waste marketplace</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="flex-1 px-3 py-6">
+
+        <p class="mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">Main</p>
+
+        <div class="space-y-0.5">
+
+            <!-- Dashboard -->
+
+            <a href="dasboard.html" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 11.5 12 4l9 7.5"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 10.5V20h13v-9.5"/>
+                    <path stroke-linecap="round" d="M9.5 20v-5h5v5"/>
+                </svg>
+                Beranda
+            </a>
+
+            <!-- Tambah Informasi ACTIVE -->
+
+            <a href="add.html" class="flex items-center gap-3 rounded-lg bg-[#EAF5EF] px-3 py-2.5 text-[12px] font-semibold text-[#16845B]">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <circle cx="12" cy="12" r="8"/>
+                    <path stroke-linecap="round" d="M12 8v8"/>
+                    <path stroke-linecap="round" d="M8 12h8"/>
+                </svg>
+                Tambah informasi
+            </a>
+
+            <!-- Buy -->
+
+            <a href="buy.html" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 7h12l1 13H5L6 7Z"/>
+                    <path stroke-linecap="round" d="M9 7a3 3 0 0 1 6 0"/>
+                    <path stroke-linecap="round" d="M9 11v.01M15 11v.01"/>
+                </svg>
+                Beli sampah
+            </a>
+
+            <!-- Activity -->
+
+            <a href="activity.html" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path stroke-linecap="round" d="M8 6h12"/>
+                    <path stroke-linecap="round" d="M8 12h12"/>
+                    <path stroke-linecap="round" d="M8 18h12"/>
+                    <path stroke-linecap="round" d="M3 6h.01"/>
+                    <path stroke-linecap="round" d="M3 12h.01"/>
+                    <path stroke-linecap="round" d="M3 18h.01"/>
+                </svg>
+                Aktivitas
+            </a>
+
+        </div>
+
+        <p class="mb-2 mt-9 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">Account</p>
+
+        <a href="profile.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]">
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="8" r="3"/>
+                <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0"/>
+            </svg>
+            Profil
+        </a>
+
+    </nav>
+
+    <div class="border-t border-[#E4E7E3] p-4">
+        <div class="flex items-center gap-3">
+
+            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DDE8E1] text-[11px] font-semibold text-[#347258]">BS</div>
+
+            <div class="min-w-0 flex-1">
+                <p class="truncate text-[11px] font-semibold text-[#303531]">Budi Santoso</p>
+                <p class="truncate text-[10px] text-[#929793]">Seller</p>
+            </div>
+
+            <button onclick="toggleProfile()" class="text-[#9AA09C] transition hover:text-[#202421]">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <circle cx="5" cy="12" r="1"/>
+                    <circle cx="12" cy="12" r="1"/>
+                    <circle cx="19" cy="12" r="1"/>
+                </svg>
+            </button>
+
+        </div>
+
+        <div id="profileDropdown" class="mt-3 hidden overflow-hidden rounded-lg border border-[#E4E7E3] bg-white">
+            <a href="profile.html" class="block px-4 py-3 text-[11px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]">Profil saya</a>
+            <button onclick="logout()" class="w-full border-t border-[#E8EAE8] px-4 py-3 text-left text-[11px] font-medium text-[#737873] transition hover:bg-[#FFF7F5] hover:text-[#C65D51]">Keluar</button>
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main class="lg:ml-[220px]">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="sticky top-0 z-30 border-b border-[#E4E7E3] bg-white/95 backdrop-blur">
+
+        <div class="flex h-[64px] items-center justify-between px-4 sm:px-6 lg:px-8">
+
+
+            <!-- Mobile Logo -->
+
+            <div class="flex items-center gap-2 lg:hidden">
+
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white">
+
+                    <svg
+                        class="h-[16px] w-[16px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            d="M7 7h10l-2-3"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M17 7l-2 3"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M17 17H7l2 3"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M7 17l2-3"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M5 12a7 7 0 0 1 2-5"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M19 12a7 7 0 0 1-2 5"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <span class="text-[15px] font-semibold">
+                    ReValue
+                </span>
+
+            </div>
+
+
+            <!-- Desktop Title -->
+
+            <div class="hidden lg:block">
+
+                <h1 class="text-[15px] font-semibold">
+                    Beranda
+                </h1>
+
+            </div>
+
+
+            <!-- Right -->
+
+            <div class="flex items-center gap-3">
+
+
+                <!-- Notification -->
+
+                <button
+                    class="relative flex h-8 w-8 items-center justify-center rounded-lg text-[#737873] transition hover:bg-[#F5F6F4]"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18 8a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h15c0-2-2.5-2-2.5-9"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M10 21h4"
+                        />
+
+                    </svg>
+
+
+                    <span class="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#D95C4F]"></span>
+
+                </button>
+
+
+                <!-- Mobile Avatar -->
+
+                <a
+                    href="profile.html"
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-[#DDE8E1] text-[10px] font-semibold text-[#347258] lg:hidden"
+                >
+                    BS
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Content -->
+
+    <div class="px-4 pb-24 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
+
+        <div class="w-full">
+
+            <!-- Intro -->
+
+            <section>
+
+                <p class="text-[11px] font-medium text-[#16845B]">Informasi kebutuhan</p>
+
+                <h2 class="mt-1 text-[22px] font-semibold tracking-[-0.03em] text-[#202421] sm:text-[25px]">Tambah informasi sampah</h2>
+
+                <p class="mt-1 max-w-xl text-[11px] leading-relaxed text-[#858A86] sm:text-xs">
+                    Beri tahu pemulung tentang sampah yang sedang kamu butuhkan. Informasi ini membantu mereka mengetahui sampah yang bisa dikumpulkan dan dijual kepadamu.
+                </p>
+
+            </section>
+
+
+            <!-- Form -->
+
+            <section class="mt-7 w-full rounded-lg border border-[#E4E7E3] bg-white">
+
+                <div class="border-b border-[#E4E7E3] px-4 py-4 sm:px-5">
+
+                    <h3 class="text-[13px] font-semibold">Informasi sampah</h3>
+
+                    <p class="mt-0.5 text-[10px] text-[#858A86]">
+                        Isi kebutuhan sampah yang ingin kamu informasikan.
+                    </p>
+
+                </div>
+
+
+                <form onsubmit="submitInformation(event)" class="px-4 py-5 sm:px-5 sm:py-6">
+
+                    <!-- Jenis & Total -->
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+
+                        <!-- Jenis -->
+
+                        <div>
+
+                            <label for="jenis" class="mb-2 block text-[10px] font-semibold text-[#404540]">
+                                Jenis sampah
+                            </label>
+
+                            <div class="relative">
+
+                                <select id="jenis" required class="w-full appearance-none rounded-md border border-[#DDE1DE] bg-white px-3 py-2.5 pr-9 text-[11px] text-[#303531] outline-none transition focus:border-[#16845B] focus:ring-2 focus:ring-[#EAF5EF]">
+                                    <option value="" disabled selected>Pilih jenis sampah</option>
+                                    <option value="Plastik">Plastik</option>
+                                    <option value="Kardus">Kardus</option>
+                                    <option value="Kertas">Kertas</option>
+                                    <option value="Logam">Logam</option>
+                                    <option value="Botol kaca">Botol kaca</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+
+                                <svg class="pointer-events-none absolute right-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#8A908B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Total -->
+
+                        <div>
+
+                            <label for="jumlah" class="mb-2 block text-[10px] font-semibold text-[#404540]">
+                                Total kebutuhan
+                            </label>
+
+                            <div class="relative">
+
+                                <input id="jumlah" type="number" min="1" placeholder="Contoh: 50" required class="w-full rounded-md border border-[#DDE1DE] bg-white px-3 py-2.5 pr-12 text-[11px] text-[#303531] outline-none transition placeholder:text-[#A5AAA6] focus:border-[#16845B] focus:ring-2 focus:ring-[#EAF5EF]">
+
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-medium text-[#858A86]">kg</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Harga -->
+
+                    <div class="mt-5">
+
+                        <label for="harga" class="mb-2 block text-[10px] font-semibold text-[#404540]">
+                            Harga yang ditawarkan
+                        </label>
+
+                        <div class="relative">
+
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] font-medium text-[#858A86]">Rp</span>
+
+                            <input id="harga" type="number" min="0" placeholder="Contoh: 4000" required class="w-full rounded-md border border-[#DDE1DE] bg-white py-2.5 pl-9 pr-14 text-[11px] text-[#303531] outline-none transition placeholder:text-[#A5AAA6] focus:border-[#16845B] focus:ring-2 focus:ring-[#EAF5EF]">
+
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-medium text-[#858A86]">/ kg</span>
+
+                        </div>
+
+                        <p class="mt-1.5 text-[9px] text-[#929793]">
+                            Harga ini membantu pemulung mengetahui nilai sampah yang kamu butuhkan.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Catatan -->
+
+                    <div class="mt-5">
+
+                        <label for="catatan" class="mb-2 block text-[10px] font-semibold text-[#404540]">
+                            Catatan <span class="font-normal text-[#A0A5A1]">(opsional)</span>
+                        </label>
+
+                        <textarea id="catatan" rows="4" placeholder="Contoh: Plastik botol harus dalam kondisi bersih dan kering." class="w-full resize-none rounded-md border border-[#DDE1DE] bg-white px-3 py-2.5 text-[11px] leading-relaxed text-[#303531] outline-none transition placeholder:text-[#A5AAA6] focus:border-[#16845B] focus:ring-2 focus:ring-[#EAF5EF]"></textarea>
+
+                    </div>
+
+
+                    <!-- Preview -->
+
+                    <div class="mt-5 rounded-md border border-[#DDE8E1] bg-[#F5FAF7] p-4">
+
+                        <div class="flex items-start gap-3">
+
+                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#EAF5EF] text-[#16845B]">
+
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M5 7h10M5 17h14"/>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-[10px] font-semibold text-[#303531]">Informasi ini akan dilihat pemulung</p>
+
+                                <p class="mt-1 text-[9px] leading-relaxed text-[#737873]">
+                                    Pemulung dapat melihat jenis, jumlah, dan harga sampah yang kamu butuhkan sehingga mereka tahu sampah apa yang bisa mereka kumpulkan dan jual.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+
+                        <a href="dasboard.html" class="flex items-center justify-center rounded-md border border-[#DDE1DE] px-4 py-2.5 text-[10px] font-semibold text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#303531]">
+                            Batal
+                        </a>
+
+                        <button type="submit" class="flex items-center justify-center rounded-md bg-[#16845B] px-5 py-2.5 text-[10px] font-semibold text-white transition hover:bg-[#126F4D] active:scale-[0.98]">
+                            Publikasikan informasi
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- Active Information -->
+
+            <section class="mt-8">
+
+                <div class="mb-3 flex items-end justify-between">
+
+                    <div>
+
+                        <h3 class="text-[13px] font-semibold">Informasi saya</h3>
+
+                        <p class="mt-0.5 text-[10px] text-[#858A86]">Informasi yang sedang dilihat pemulung.</p>
+
+                    </div>
+
+                    <span class="text-[9px] font-medium text-[#16845B]">3 aktif</span>
+
+                </div>
+
+
+                <div class="w-full overflow-hidden rounded-lg border border-[#E4E7E3] bg-white">
+
+                    <!-- Item 1 -->
+
+                    <div class="flex items-center gap-3 border-b border-[#E8EAE8] px-4 py-3.5 sm:px-5">
+
+                        <div class="h-2 w-2 shrink-0 rounded-full bg-[#4BA978]"></div>
+
+                        <div class="min-w-0 flex-1">
+
+                            <p class="text-[11px] font-semibold">Plastik</p>
+
+                            <p class="mt-0.5 text-[9px] text-[#858A86]">Butuh 50 kg · Rp4.000/kg</p>
+
+                        </div>
+
+                        <span class="shrink-0 text-[9px] font-semibold text-[#16845B]">Aktif</span>
+
+                    </div>
+
+
+                    <!-- Item 2 -->
+
+                    <div class="flex items-center gap-3 border-b border-[#E8EAE8] px-4 py-3.5 sm:px-5">
+
+                        <div class="h-2 w-2 shrink-0 rounded-full bg-[#C78A4B]"></div>
+
+                        <div class="min-w-0 flex-1">
+
+                            <p class="text-[11px] font-semibold">Kardus</p>
+
+                            <p class="mt-0.5 text-[9px] text-[#858A86]">Butuh 100 kg · Rp2.500/kg</p>
+
+                        </div>
+
+                        <span class="shrink-0 text-[9px] font-semibold text-[#16845B]">Aktif</span>
+
+                    </div>
+
+
+                    <!-- Item 3 -->
+
+                    <div class="flex items-center gap-3 px-4 py-3.5 sm:px-5">
+
+                        <div class="h-2 w-2 shrink-0 rounded-full bg-[#7396B3]"></div>
+
+                        <div class="min-w-0 flex-1">
+
+                            <p class="text-[11px] font-semibold">Kertas</p>
+
+                            <p class="mt-0.5 text-[9px] text-[#858A86]">Butuh 25 kg · Rp2.000/kg</p>
+
+                        </div>
+
+                        <span class="shrink-0 text-[9px] font-semibold text-[#16845B]">Aktif</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="mt-8">
+
+                <div class="mb-3">
+
+                    <h3 class="text-[13px] font-semibold">Bagaimana informasi ini membantu?</h3>
+
+                    <p class="mt-0.5 text-[10px] text-[#858A86]">Alurnya sederhana.</p>
+
+                </div>
+
+
+                <div class="grid overflow-hidden rounded-lg border border-[#E4E7E3] bg-white sm:grid-cols-3">
+
+                    <div class="border-b border-[#E4E7E3] p-4 sm:border-b-0 sm:border-r">
+
+                        <div class="flex h-7 w-7 items-center justify-center rounded-md bg-[#EAF5EF] text-[10px] font-semibold text-[#16845B]">01</div>
+
+                        <p class="mt-3 text-[10px] font-semibold">Kamu berbagi informasi</p>
+
+                        <p class="mt-1 text-[9px] leading-relaxed text-[#858A86]">Beritahu jenis dan lokasi sampah yang tersedia.</p>
+
+                    </div>
+
+
+                    <div class="border-b border-[#E4E7E3] p-4 sm:border-b-0 sm:border-r">
+
+                        <div class="flex h-7 w-7 items-center justify-center rounded-md bg-[#FFF3E5] text-[10px] font-semibold text-[#A66B32]">02</div>
+
+                        <p class="mt-3 text-[10px] font-semibold">Pemulung melihat</p>
+
+                        <p class="mt-1 text-[9px] leading-relaxed text-[#858A86]">Pemulung di sekitar dapat menemukan informasi tersebut.</p>
+
+                    </div>
+
+
+                    <div class="p-4">
+
+                        <div class="flex h-7 w-7 items-center justify-center rounded-md bg-[#EEF3F8] text-[10px] font-semibold text-[#54708A]">03</div>
+
+                        <p class="mt-3 text-[10px] font-semibold">Sampah jadi bernilai</p>
+
+                        <p class="mt-1 text-[9px] leading-relaxed text-[#858A86]">Pemulung mengambilnya dan dapat menjualnya kembali.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAV
+     ===================================================== -->
+
+<nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-[#E4E7E3] bg-white/95 backdrop-blur lg:hidden">
+
+    <div class="mx-auto flex h-[62px] max-w-md items-center justify-around px-2">
+
+        <!-- Home -->
+
+        <a href="dasboard.html" class="flex w-16 flex-col items-center gap-1 text-[#8A908B] transition hover:text-[#16845B]">
+
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 11.5 12 4l9 7.5"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 10.5V20h13v-9.5"/>
+                <path stroke-linecap="round" d="M9.5 20v-5h5v5"/>
+            </svg>
+
+            <span class="text-[8px] font-medium">Beranda</span>
+
+        </a>
+
+
+        <!-- Add ACTIVE -->
+
+        <a href="add.html" class="flex w-16 flex-col items-center gap-1 text-[#16845B]">
+
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="12" r="8"/>
+                <path stroke-linecap="round" d="M12 8v8"/>
+                <path stroke-linecap="round" d="M8 12h8"/>
+            </svg>
+
+            <span class="text-[8px] font-semibold">Tambah</span>
+
+        </a>
+
+
+        <!-- Buy -->
+
+        <a href="buy.html" class="flex w-16 flex-col items-center gap-1 text-[#8A908B] transition hover:text-[#16845B]">
+
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 7h12l1 13H5L6 7Z"/>
+                <path stroke-linecap="round" d="M9 7a3 3 0 0 1 6 0"/>
+                <path stroke-linecap="round" d="M9 11v.01M15 11v.01"/>
+            </svg>
+
+            <span class="text-[8px] font-medium">Beli</span>
+
+        </a>
+
+
+        <!-- Activity -->
+
+        <a href="activity.html" class="flex w-16 flex-col items-center gap-1 text-[#8A908B] transition hover:text-[#16845B]">
+
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path stroke-linecap="round" d="M8 6h12"/>
+                <path stroke-linecap="round" d="M8 12h12"/>
+                <path stroke-linecap="round" d="M8 18h12"/>
+                <path stroke-linecap="round" d="M3 6h.01"/>
+                <path stroke-linecap="round" d="M3 12h.01"/>
+                <path stroke-linecap="round" d="M3 18h.01"/>
+            </svg>
+
+            <span class="text-[8px] font-medium">Aktivitas</span>
+
+        </a>
+
+
+        <!-- Profile -->
+
+        <a href="profile.html" class="flex w-16 flex-col items-center gap-1 text-[#8A908B] transition hover:text-[#16845B]">
+
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="8" r="3"/>
+                <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0"/>
+            </svg>
+
+            <span class="text-[8px] font-medium">Profil</span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<script>
+
+function toggleProfile() {
+    const dropdown = document.getElementById('profileDropdown');
+    dropdown.classList.toggle('hidden');
+}
+
+function logout() {
+    window.location.href = 'login.html';
+}
+
+</script>
+</body>
+</html>

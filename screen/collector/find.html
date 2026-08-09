@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cari Sampah — ReValue</title>
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CLI -->
+    <link rel="stylesheet" href="../../src/output.css">
+
+</head>
+
+
+<body class="bg-[#F8F8F6] font-poppins text-[#202421] antialiased">
+
+
+    <!-- =========================================================
+         DESKTOP SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="fixed inset-y-0 left-0 z-40 hidden w-[240px] flex-col border-r border-[#E4E7E3] bg-white lg:flex"
+    >
+
+        <!-- Logo -->
+        <div class="flex h-[76px] items-center border-b border-[#E4E7E3] px-6">
+
+            <a href="dashboard.html" class="flex items-center gap-2.5">
+
+                <div
+                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M7 7h10l-2-3M17 7l-2 3M17 17H7l2 3M7 17l2-3"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 12a7 7 0 0 1 2-5M19 12a7 7 0 0 1-2 5"
+                        />
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-[15px] font-semibold tracking-[-0.02em]">
+                        ReValue
+                    </p>
+
+                    <p class="text-[9px] font-medium uppercase tracking-[0.14em] text-[#8A908B]">
+                        Waste marketplace
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="flex-1 px-3 py-6">
+
+            <p class="mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">
+                Main
+            </p>
+
+
+            <div class="space-y-0.5">
+
+                <!-- Dashboard -->
+                <a
+                    href="dashboard.html"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 11.5 12 4l9 7.5"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5.5 10.5V20h13v-9.5"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M9.5 20v-5h5v5"
+                        />
+                    </svg>
+
+                    Beranda
+
+                </a>
+
+
+                <!-- Cari Sampah ACTIVE -->
+                <a
+                    href="find.html"
+                    class="flex items-center gap-3 rounded-lg bg-[#EAF5EF] px-3 py-2.5 text-[12px] font-semibold text-[#16845B]"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                    >
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="6.5"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="m16 16 4.5 4.5"
+                        />
+                    </svg>
+
+                    Cari sampah
+
+                </a>
+
+
+                <!-- Jual Sampah -->
+                <a
+                    href="sell.html"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            d="M12 3v18"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
+                        />
+                    </svg>
+
+                    Jual sampah
+
+                </a>
+
+
+                <!-- Aktivitas -->
+                <a
+                    href="activity.html"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+                >
+
+                    <svg
+                        class="h-[17px] w-[17px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            d="M8 6h12"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M8 12h12"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M8 18h12"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M3 6h.01"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M3 12h.01"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            d="M3 18h.01"
+                        />
+                    </svg>
+
+                    Aktivitas
+
+                </a>
+
+            </div>
+
+
+            <p class="mb-2 mt-9 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">
+                Account
+            </p>
+
+
+            <!-- Profil -->
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+            >
+
+                <svg
+                    class="h-[17px] w-[17px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M5 21a7 7 0 0 1 14 0"
+                    />
+                </svg>
+
+                Profil
+
+            </a>
+
+        </nav>
+
+
+        <!-- User -->
+        <div class="border-t border-[#E4E7E3] p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DDE8E1] text-[11px] font-semibold text-[#347258]"
+                >
+                    BS
+                </div>
+
+                <div class="min-w-0 flex-1">
+
+                    <p class="truncate text-[11px] font-semibold">
+                        Budi Santoso
+                    </p>
+
+                    <p class="truncate text-[10px] text-[#929793]">
+                        Waste Collector
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="lg:pl-[240px]">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="sticky top-0 z-30 border-b border-[#E4E7E3] bg-white/95 backdrop-blur">
+
+            <div class="flex h-[64px] items-center justify-between px-4 sm:px-6 lg:px-8">
+
+                <!-- Mobile Logo -->
+                <div class="flex items-center gap-2 lg:hidden">
+
+                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white">
+
+                        <svg
+                            class="h-[16px] w-[16px]"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path stroke-linecap="round" d="M7 7h10l-2-3"/>
+                            <path stroke-linecap="round" d="M17 7l-2 3"/>
+                            <path stroke-linecap="round" d="M17 17H7l2 3"/>
+                            <path stroke-linecap="round" d="M7 17l2-3"/>
+                            <path stroke-linecap="round" d="M5 12a7 7 0 0 1 2-5"/>
+                            <path stroke-linecap="round" d="M19 12a7 7 0 0 1-2 5"/>
+                        </svg>
+
+                    </div>
+
+                    <span class="text-[15px] font-semibold">
+                        ReValue
+                    </span>
+
+                </div>
+
+
+                <!-- Desktop title -->
+                <div class="hidden lg:block">
+
+                    <h1 class="text-[15px] font-semibold">
+                        Beranda
+                    </h1>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="flex items-center gap-3">
+
+                    <!-- Notification -->
+                    <button
+                        class="relative flex h-8 w-8 items-center justify-center rounded-lg text-[#737873] transition hover:bg-[#F5F6F4]"
+                    >
+
+                        <svg
+                            class="h-[17px] w-[17px]"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M18 8a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h15c0-2-2.5-2-2.5-9"/>
+                            <path stroke-linecap="round" d="M10 21h4"/>
+                        </svg>
+
+                        <span class="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#D95C4F]"></span>
+
+                    </button>
+
+
+                    <!-- Mobile avatar -->
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#DDE8E1] text-[10px] font-semibold text-[#347258] lg:hidden">
+                        BS
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONTENT
+        ====================================================== -->
+
+        <div
+            class="px-4 pb-24 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
+
+            <div class="mx-auto max-w-[1180px]">
+
+
+                <!-- =================================================
+                     PAGE HEADER
+                ================================================== -->
+
+                <div>
+
+                    <p
+                        class="text-[10px] font-medium uppercase tracking-[0.12em] text-[#16845B]">
+
+                        Pickup sampah
+
+                    </p>
+
+
+                    <h2
+                        class="mt-1 text-[22px] font-semibold tracking-[-0.03em]">
+
+                        Cari sampah di sekitar
+
+                    </h2>
+
+
+                    <p
+                        class="mt-1 max-w-[600px] text-[11px] leading-relaxed text-[#858A86]">
+
+                        Temukan restoran, sekolah, atau tempat usaha yang
+                        sedang menyediakan sampah untuk dijemput.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SEARCH + FILTER
+                ================================================== -->
+
+                <section
+                    class="mt-6 rounded-lg border border-[#E4E7E3] bg-white p-3 sm:p-4">
+
+                    <div class="flex flex-col gap-3 sm:flex-row">
+
+
+                        <!-- Search -->
+
+                        <div class="relative flex-1">
+
+                            <span
+                                class="absolute left-3 top-1/2 -translate-y-1/2 text-[16px] text-[#8A908B]">
+
+                                ⌕
+
+                            </span>
+
+
+                            <input
+                                type="text"
+                                placeholder="Cari nama tempat atau lokasi..."
+                                class="h-10 w-full rounded-lg border border-[#E1E4E1] bg-white pl-9 pr-3 text-[10px] outline-none transition placeholder:text-[#A0A5A1] focus:border-[#16845B] focus:ring-2 focus:ring-[#16845B]/10">
+
+                        </div>
+
+
+
+                        <!-- Location -->
+
+                        <button
+                            class="flex h-10 items-center justify-center gap-2 rounded-lg border border-[#E1E4E1] px-4 text-[10px] font-medium text-[#59605B] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            <span>
+                                ⌖
+                            </span>
+
+                            Sekitar saya
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Category -->
+
+                    <div
+                        class="mt-3 flex gap-2 overflow-x-auto pb-1">
+
+                        <button
+                            class="shrink-0 rounded-full bg-[#16845B] px-3 py-1.5 text-[9px] font-semibold text-white">
+
+                            Semua
+
+                        </button>
+
+
+                        <button
+                            class="shrink-0 rounded-full border border-[#E1E4E1] bg-white px-3 py-1.5 text-[9px] font-medium text-[#737873] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            Plastik
+
+                        </button>
+
+
+                        <button
+                            class="shrink-0 rounded-full border border-[#E1E4E1] bg-white px-3 py-1.5 text-[9px] font-medium text-[#737873] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            Kardus
+
+                        </button>
+
+
+                        <button
+                            class="shrink-0 rounded-full border border-[#E1E4E1] bg-white px-3 py-1.5 text-[9px] font-medium text-[#737873] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            Kertas
+
+                        </button>
+
+
+                        <button
+                            class="shrink-0 rounded-full border border-[#E1E4E1] bg-white px-3 py-1.5 text-[9px] font-medium text-[#737873] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            Logam
+
+                        </button>
+
+
+                        <button
+                            class="shrink-0 rounded-full border border-[#E1E4E1] bg-white px-3 py-1.5 text-[9px] font-medium text-[#737873] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                            Kaca
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     MAIN GRID
+                ================================================== -->
+
+                <div
+                    class="mt-5 grid gap-5 lg:grid-cols-[1fr_370px]">
+
+
+                    <!-- =================================================
+                         LIST
+                    ================================================== -->
+
+                    <section>
+
+
+                        <!-- List Header -->
+
+                        <div
+                            class="mb-3 flex items-center justify-between">
+
+                            <div>
+
+                                <h3 class="text-[13px] font-semibold">
+
+                                    Tersedia di sekitar kamu
+
+                                </h3>
+
+                                <p class="mt-0.5 text-[9px] text-[#858A86]">
+
+                                    8 lokasi sedang membutuhkan pickup
+
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                class="text-[9px] font-medium text-[#737873] hover:text-[#16845B]">
+
+                                Terdekat ▾
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             CARDS
+                        ================================================== -->
+
+                        <div class="space-y-2.5">
+
+
+                            <!-- CARD 1 -->
+
+                            <article
+                                class="group rounded-lg border border-[#E4E7E3] bg-white p-4 transition hover:border-[#B7D7C5] hover:shadow-[0_4px_16px_rgba(22,132,91,0.06)]">
+
+                                <div class="flex gap-3">
+
+
+                                    <div
+                                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EEF7F2] text-[18px] text-[#16845B]">
+
+                                        ♧
+
+                                    </div>
+
+
+                                    <div class="min-w-0 flex-1">
+
+
+                                        <div
+                                            class="flex items-start justify-between gap-3">
+
+                                            <div>
+
+                                                <h4 class="text-[11px] font-semibold">
+
+                                                    Kantin Sekolah Harapan
+
+                                                </h4>
+
+                                                <p
+                                                    class="mt-0.5 text-[9px] text-[#858A86]">
+
+                                                    Sekolah · 0,8 km
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <span
+                                                class="shrink-0 rounded-full bg-[#EAF5EF] px-2 py-1 text-[8px] font-medium text-[#16845B]">
+
+                                                Baru
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex flex-wrap gap-1.5">
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Kardus ±12 kg
+
+                                            </span>
+
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Plastik ±5 kg
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex items-center justify-between border-t border-[#ECEEEB] pt-3">
+
+                                            <div>
+
+                                                <p class="text-[8px] text-[#9A9F9B]">
+
+                                                    Tersedia sampai
+
+                                                </p>
+
+                                                <p class="mt-0.5 text-[9px] font-medium">
+
+                                                    Hari ini, 15:00
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <button
+                                                onclick="openPickup('Kantin Sekolah Harapan','Sekolah','0,8 km','Kardus ±12 kg, Plastik ±5 kg')"
+                                                class="rounded-lg bg-[#16845B] px-3 py-2 text-[8px] font-semibold text-white transition hover:bg-[#126D4B]">
+
+                                                Lihat detail
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- CARD 2 -->
+
+                            <article
+                                class="group rounded-lg border border-[#E4E7E3] bg-white p-4 transition hover:border-[#B7D7C5] hover:shadow-[0_4px_16px_rgba(22,132,91,0.06)]">
+
+                                <div class="flex gap-3">
+
+                                    <div
+                                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#FFF4E8] text-[18px] text-[#A66B32]">
+
+                                        ▣
+
+                                    </div>
+
+
+                                    <div class="min-w-0 flex-1">
+
+                                        <div
+                                            class="flex items-start justify-between gap-3">
+
+                                            <div>
+
+                                                <h4 class="text-[11px] font-semibold">
+
+                                                    Rumah Makan Sederhana
+
+                                                </h4>
+
+                                                <p
+                                                    class="mt-0.5 text-[9px] text-[#858A86]">
+
+                                                    Restoran · 1,2 km
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <span
+                                                class="shrink-0 rounded-full bg-[#F2F3F1] px-2 py-1 text-[8px] font-medium text-[#737873]">
+
+                                                2 jam lalu
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex flex-wrap gap-1.5">
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Kardus ±8 kg
+
+                                            </span>
+
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Botol PET ±7 kg
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex items-center justify-between border-t border-[#ECEEEB] pt-3">
+
+                                            <div>
+
+                                                <p class="text-[8px] text-[#9A9F9B]">
+
+                                                    Tersedia sampai
+
+                                                </p>
+
+                                                <p class="mt-0.5 text-[9px] font-medium">
+
+                                                    Hari ini, 17:00
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <button
+                                                onclick="openPickup('Rumah Makan Sederhana','Restoran','1,2 km','Kardus ±8 kg, Botol PET ±7 kg')"
+                                                class="rounded-lg bg-[#16845B] px-3 py-2 text-[8px] font-semibold text-white transition hover:bg-[#126D4B]">
+
+                                                Lihat detail
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- CARD 3 -->
+
+                            <article
+                                class="group rounded-lg border border-[#E4E7E3] bg-white p-4 transition hover:border-[#B7D7C5] hover:shadow-[0_4px_16px_rgba(22,132,91,0.06)]">
+
+                                <div class="flex gap-3">
+
+                                    <div
+                                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EEF3F8] text-[18px] text-[#54708A]">
+
+                                        ▤
+
+                                    </div>
+
+
+                                    <div class="min-w-0 flex-1">
+
+                                        <div>
+
+                                            <h4 class="text-[11px] font-semibold">
+
+                                                Minimarket Bintang
+
+                                            </h4>
+
+                                            <p
+                                                class="mt-0.5 text-[9px] text-[#858A86]">
+
+                                                Toko · 1,7 km
+
+                                            </p>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex flex-wrap gap-1.5">
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Kardus ±20 kg
+
+                                            </span>
+
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Kertas ±4 kg
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex items-center justify-between border-t border-[#ECEEEB] pt-3">
+
+                                            <div>
+
+                                                <p class="text-[8px] text-[#9A9F9B]">
+
+                                                    Tersedia sampai
+
+                                                </p>
+
+                                                <p class="mt-0.5 text-[9px] font-medium">
+
+                                                    Besok, 10:00
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <button
+                                                onclick="openPickup('Minimarket Bintang','Toko','1,7 km','Kardus ±20 kg, Kertas ±4 kg')"
+                                                class="rounded-lg bg-[#16845B] px-3 py-2 text-[8px] font-semibold text-white transition hover:bg-[#126D4B]">
+
+                                                Lihat detail
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <!-- CARD 4 -->
+
+                            <article
+                                class="group rounded-lg border border-[#E4E7E3] bg-white p-4 transition hover:border-[#B7D7C5] hover:shadow-[0_4px_16px_rgba(22,132,91,0.06)]">
+
+                                <div class="flex gap-3">
+
+                                    <div
+                                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F1EFF8] text-[18px] text-[#776A9A]">
+
+                                        ϟ
+
+                                    </div>
+
+
+                                    <div class="min-w-0 flex-1">
+
+                                        <div>
+
+                                            <h4 class="text-[11px] font-semibold">
+
+                                                Bengkel Maju Motor
+
+                                            </h4>
+
+                                            <p
+                                                class="mt-0.5 text-[9px] text-[#858A86]">
+
+                                                Bengkel · 2,4 km
+
+                                            </p>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex flex-wrap gap-1.5">
+
+                                            <span
+                                                class="rounded bg-[#F4F5F3] px-2 py-1 text-[8px] font-medium text-[#606761]">
+
+                                                Logam ±10 kg
+
+                                            </span>
+
+                                        </div>
+
+
+
+                                        <div
+                                            class="mt-3 flex items-center justify-between border-t border-[#ECEEEB] pt-3">
+
+                                            <div>
+
+                                                <p class="text-[8px] text-[#9A9F9B]">
+
+                                                    Tersedia sampai
+
+                                                </p>
+
+                                                <p class="mt-0.5 text-[9px] font-medium">
+
+                                                    Besok, 14:00
+
+                                                </p>
+
+                                            </div>
+
+
+                                            <button
+                                                onclick="openPickup('Bengkel Maju Motor','Bengkel','2,4 km','Logam ±10 kg')"
+                                                class="rounded-lg bg-[#16845B] px-3 py-2 text-[8px] font-semibold text-white transition hover:bg-[#126D4B]">
+
+                                                Lihat detail
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         MAP
+                    ================================================== -->
+
+                    <aside class="hidden lg:block">
+
+                        <div class="sticky top-[88px]">
+
+                            <div
+                                class="overflow-hidden rounded-lg border border-[#E4E7E3] bg-white">
+
+
+                                <div
+                                    class="flex items-center justify-between border-b border-[#E4E7E3] px-4 py-3">
+
+                                    <div>
+
+                                        <h3 class="text-[12px] font-semibold">
+
+                                            Area sekitar
+
+                                        </h3>
+
+                                        <p
+                                            class="mt-0.5 text-[8px] text-[#858A86]">
+
+                                            Berdasarkan lokasi kamu
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <button
+                                        class="text-[9px] font-medium text-[#16845B]">
+
+                                        Ubah
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <!-- Fake Map -->
+
+                                <div
+                                    class="relative h-[330px] overflow-hidden bg-[#EAF0EA]">
+
+
+                                    <div
+                                        class="absolute left-[18%] top-[-20%] h-[150%] w-[1px] rotate-[22deg] bg-white">
+                                    </div>
+
+                                    <div
+                                        class="absolute left-[55%] top-[-20%] h-[150%] w-[2px] rotate-[-18deg] bg-white">
+                                    </div>
+
+                                    <div
+                                        class="absolute left-[-10%] top-[48%] h-[2px] w-[130%] rotate-[8deg] bg-white">
+                                    </div>
+
+                                    <div
+                                        class="absolute left-[-10%] top-[72%] h-[1px] w-[130%] rotate-[-5deg] bg-white">
+                                    </div>
+
+
+                                    <div
+                                        class="absolute left-[12%] top-[18%] h-16 w-24 rounded bg-[#DCE8DC]">
+                                    </div>
+
+                                    <div
+                                        class="absolute right-[8%] top-[42%] h-20 w-28 rounded bg-[#DCE8DC]">
+                                    </div>
+
+
+                                    <button
+                                        class="absolute left-[30%] top-[28%] flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#16845B] text-[10px] text-white shadow-md">
+
+                                        1
+
+                                    </button>
+
+
+                                    <button
+                                        class="absolute right-[28%] top-[45%] flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#16845B] text-[10px] text-white shadow-md">
+
+                                        2
+
+                                    </button>
+
+
+                                    <button
+                                        class="absolute bottom-[20%] left-[22%] flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#16845B] text-[10px] text-white shadow-md">
+
+                                        3
+
+                                    </button>
+
+
+                                    <div
+                                        class="absolute bottom-[22%] right-[20%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-white bg-[#3C7FD1] shadow">
+
+                                        <div
+                                            class="h-1.5 w-1.5 rounded-full bg-white">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1.5 text-[8px] text-[#737873] shadow-sm">
+
+                                        📍 Jonggol
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div
+                                    class="flex items-center justify-between px-4 py-3">
+
+                                    <div>
+
+                                        <p class="text-[9px] text-[#858A86]">
+
+                                            Sampah tersedia
+
+                                        </p>
+
+                                        <p
+                                            class="mt-0.5 text-[12px] font-semibold">
+
+                                            8 lokasi
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <button
+                                        class="rounded-lg border border-[#DDE1DE] px-3 py-2 text-[8px] font-semibold text-[#59605B] transition hover:border-[#16845B] hover:text-[#16845B]">
+
+                                        Lihat peta
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         MOBILE BOTTOM NAV
+    ========================================================== -->
+
+    <nav
+        class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E4E7E3] bg-white/95 backdrop-blur lg:hidden"
+    >
+
+        <div class="mx-auto flex h-[62px] max-w-md items-center justify-around px-2">
+
+
+            <!-- Home -->
+            <a
+                href="collector/dashboard.html"
+                class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+            >
+
+                <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 11.5 12 4l9 7.5"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5.5 10.5V20h13v-9.5"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M9.5 20v-5h5v5"
+                    />
+                </svg>
+
+                <span class="text-[8px] font-medium">
+                    Beranda
+                </span>
+
+            </a>
+
+
+            <!-- Find ACTIVE -->
+            <a
+                href="find.html"
+                class="flex w-16 flex-col items-center gap-1 text-[#16845B]"
+            >
+
+                <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="6.5"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="m16 16 4.5 4.5"
+                    />
+                </svg>
+
+                <span class="text-[8px] font-semibold">
+                    Cari
+                </span>
+
+            </a>
+
+
+            <!-- Sell -->
+            <a
+                href="sell.html"
+                class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+            >
+
+                <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <path
+                        stroke-linecap="round"
+                        d="M12 3v18"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
+                    />
+                </svg>
+
+                <span class="text-[8px] font-medium">
+                    Jual
+                </span>
+
+            </a>
+
+
+            <!-- Activity -->
+            <a
+                href="activity.html"
+                class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+            >
+
+                <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <path
+                        stroke-linecap="round"
+                        d="M8 6h12"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M8 12h12"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M8 18h12"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M3 6h.01"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M3 12h.01"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M3 18h.01"
+                    />
+                </svg>
+
+                <span class="text-[8px] font-medium">
+                    Aktivitas
+                </span>
+
+            </a>
+
+
+            <!-- Profile -->
+            <a
+                href="#"
+                class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+            >
+
+                <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                >
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        d="M5 21a7 7 0 0 1 14 0"
+                    />
+                </svg>
+
+                <span class="text-[8px] font-medium">
+                    Profil
+                </span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         PICKUP DETAIL MODAL
+    ========================================================== -->
+
+    <div
+        id="pickupModal"
+        class="fixed inset-0 z-[100] hidden items-end justify-center bg-[#202421]/30 p-0 backdrop-blur-[2px] sm:items-center sm:p-4">
+
+        <div
+            class="w-full max-w-[440px] rounded-t-xl bg-white p-5 sm:rounded-xl">
+
+
+            <div class="flex items-start justify-between">
+
+                <div>
+
+                    <p
+                        class="text-[9px] font-medium uppercase tracking-[0.1em] text-[#16845B]">
+
+                        Detail pickup
+
+                    </p>
+
+
+                    <h3
+                        id="modalName"
+                        class="mt-1 text-[16px] font-semibold">
+
+                        Kantin Sekolah Harapan
+
+                    </h3>
+
+
+                    <p
+                        id="modalType"
+                        class="mt-0.5 text-[9px] text-[#858A86]">
+
+                        Sekolah · 0,8 km
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    onclick="closePickup()"
+                    class="flex h-7 w-7 items-center justify-center rounded-lg text-[#737873] hover:bg-[#F5F6F4]">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                class="mt-5 rounded-lg bg-[#F2F8F4] p-4">
+
+                <p class="text-[9px] text-[#7E8982]">
+
+                    Sampah tersedia
+
+                </p>
+
+
+                <p
+                    id="modalWaste"
+                    class="mt-1 text-[11px] font-semibold">
+
+                    Kardus ±12 kg, Plastik ±5 kg
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mt-4 space-y-3">
+
+                <div class="flex justify-between">
+
+                    <span class="text-[9px] text-[#858A86]">
+                        Lokasi
+                    </span>
+
+                    <span
+                        id="modalDistance"
+                        class="text-[9px] font-medium">
+
+                        0,8 km
+
+                    </span>
+
+                </div>
+
+
+                <div class="flex justify-between">
+
+                    <span class="text-[9px] text-[#858A86]">
+                        Waktu pickup
+                    </span>
+
+                    <span class="text-[9px] font-medium">
+
+                        Hari ini · 15:00
+
+                    </span>
+
+                </div>
+
+
+                <div class="flex justify-between">
+
+                    <span class="text-[9px] text-[#858A86]">
+                        Status
+                    </span>
+
+                    <span
+                        class="text-[9px] font-medium text-[#16845B]">
+
+                        ● Masih tersedia
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="mt-5 border-l-2 border-[#16845B] bg-[#F8F8F6] px-3 py-2.5">
+
+                <p
+                    class="text-[8px] leading-relaxed text-[#737873]">
+
+                    Pastikan kamu dapat mengambil sampah sesuai waktu
+                    yang diberikan. Setelah mengambilnya, sampah dapat
+                    kamu jual melalui ReValue.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mt-5 grid grid-cols-2 gap-2">
+
+                <button
+                    onclick="closePickup()"
+                    class="h-10 rounded-lg border border-[#DDE1DE] text-[9px] font-semibold text-[#59605B] hover:bg-[#F5F6F4]">
+
+                    Batal
+
+                </button>
+
+
+                <button
+                    onclick="claimPickup()"
+                    class="h-10 rounded-lg bg-[#16845B] text-[9px] font-semibold text-white hover:bg-[#126D4B]">
+
+                    Ambil pickup
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         SUCCESS MODAL
+    ========================================================== -->
+
+    <div
+        id="successModal"
+        class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#202421]/30 p-4 backdrop-blur-[2px]">
+
+        <div
+            class="w-full max-w-[380px] rounded-xl bg-white p-6 text-center shadow-xl">
+
+
+            <div
+                class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#EAF5EF] text-[20px] text-[#16845B]">
+
+                ✓
+
+            </div>
+
+
+            <h3 class="mt-4 text-[15px] font-semibold">
+
+                Pickup berhasil diambil
+
+            </h3>
+
+
+            <p
+                class="mt-2 text-[9px] leading-relaxed text-[#737873]">
+
+                Lokasi pickup sudah masuk ke aktivitas kamu.
+                Jangan lupa datang sesuai waktu yang tersedia.
+
+            </p>
+
+
+            <button
+                onclick="closeSuccess()"
+                class="mt-5 h-10 w-full rounded-lg bg-[#16845B] text-[9px] font-semibold text-white hover:bg-[#126D4B]">
+
+                Lihat aktivitas
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        function openPickup(name, type, distance, waste) {
+
+            document.getElementById("modalName").innerText = name;
+
+            document.getElementById("modalType").innerText =
+                type + " · " + distance;
+
+            document.getElementById("modalDistance").innerText =
+                distance;
+
+            document.getElementById("modalWaste").innerText =
+                waste;
+
+
+            const modal =
+                document.getElementById("pickupModal");
+
+
+            modal.classList.remove("hidden");
+
+            modal.classList.add("flex");
+
+            document.body.classList.add("overflow-hidden");
+
+        }
+
+
+
+        function closePickup() {
+
+            const modal =
+                document.getElementById("pickupModal");
+
+
+            modal.classList.add("hidden");
+
+            modal.classList.remove("flex");
+
+            document.body.classList.remove("overflow-hidden");
+
+        }
+
+
+
+        function claimPickup() {
+
+            closePickup();
+
+
+            const success =
+                document.getElementById("successModal");
+
+
+            success.classList.remove("hidden");
+
+            success.classList.add("flex");
+
+        }
+
+
+
+        function closeSuccess() {
+
+            const success =
+                document.getElementById("successModal");
+
+
+            success.classList.add("hidden");
+
+            success.classList.remove("flex");
+
+            document.body.classList.remove("overflow-hidden");
+
+        }
+
+
+
+        document
+            .getElementById("pickupModal")
+            .addEventListener("click", function (event) {
+
+                if (event.target === this) {
+
+                    closePickup();
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
