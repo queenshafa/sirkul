@@ -1,6 +1,15 @@
 {
+  "name": "sirkul-backend",
+  "version": "1.0.0",
+  "description": "Backend vanilla JS (Node.js native http module) untuk website Sirkul, terhubung ke Firebase Firestore.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "firebase-admin": "^12.6.0",
+    "dotenv": "^16.4.5"
   }
 }
