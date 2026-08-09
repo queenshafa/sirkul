@@ -1,1097 +1,858 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>ReValue — Aktivitas</title>
 
     <!-- Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CLI -->
-    <link rel="stylesheet" href="../../src/output.css">
+    <link rel="stylesheet" href="../../src/output.css" />
+  </head>
 
-</head>
-
-
-<body class="bg-[#F8F9F7] font-[Poppins] text-[#202421]">
-
-
-<!-- =====================================================
+  <body class="bg-[#F8F9F7] font-[Poppins] text-[#202421]">
+    <!-- =====================================================
      DESKTOP SIDEBAR
      ===================================================== -->
 
     <aside
-        class="fixed inset-y-0 left-0 z-40 hidden w-[240px] border-r border-[#E4E7E3] bg-white lg:flex lg:flex-col"
+      class="fixed inset-y-0 left-0 z-40 hidden w-[240px] border-r border-[#E4E7E3] bg-white lg:flex lg:flex-col"
     >
+      <!-- Logo -->
 
-        <!-- Logo -->
+      <div class="flex h-[76px] items-center border-b border-[#E4E7E3] px-6">
+        <a href="dashboard.html" class="flex items-center gap-2.5">
+          <div
+            class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white"
+          >
+            <svg
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7 7h10l-2-3M17 7l-2 3M17 17H7l2 3M7 17l2-3"
+              />
 
-        <div class="flex h-[76px] items-center border-b border-[#E4E7E3] px-6">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 12a7 7 0 0 1 2-5M19 12a7 7 0 0 1-2 5"
+              />
+            </svg>
+          </div>
 
-            <a href="dashboard.html" class="flex items-center gap-2.5">
+          <div>
+            <p class="text-[15px] font-semibold tracking-[-0.02em]">ReValue</p>
 
-                <div
-                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white"
-                >
-
-                    <svg
-                        class="h-[17px] w-[17px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M7 7h10l-2-3M17 7l-2 3M17 17H7l2 3M7 17l2-3"
-                        />
-
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M5 12a7 7 0 0 1 2-5M19 12a7 7 0 0 1-2 5"
-                        />
-                    </svg>
-
-                </div>
-
-
-                <div>
-
-                    <p class="text-[15px] font-semibold tracking-[-0.02em]">
-                        ReValue
-                    </p>
-
-                    <p class="text-[9px] font-medium uppercase tracking-[0.14em] text-[#8A908B]">
-                        Waste marketplace
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- Navigation -->
-
-        <nav class="flex-1 px-3 py-6">
-
-            <p class="mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">
-                Main
+            <p
+              class="text-[9px] font-medium uppercase tracking-[0.14em] text-[#8A908B]"
+            >
+              Waste marketplace
             </p>
-
-
-            <div class="space-y-0.5">
-
-
-                <!-- Dashboard -->
-
-                <a
-                    href="dashboard.html"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
-                >
-
-                    <svg
-                        class="h-[17px] w-[17px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M3 11.5 12 4l9 7.5"
-                        />
-
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M5.5 10.5V20h13v-9.5"
-                        />
-
-                        <path
-                            stroke-linecap="round"
-                            d="M9.5 20v-5h5v5"
-                        />
-                    </svg>
-
-                    Beranda
-
-                </a>
-
-
-
-                <!-- Find -->
-
-                <a
-                    href="find.html"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
-                >
-
-                    <svg
-                        class="h-[17px] w-[17px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                    >
-                        <circle cx="11" cy="11" r="6.5"/>
-                        <path stroke-linecap="round" d="m16 16 4.5 4.5"/>
-                    </svg>
-
-                    Cari sampah
-
-                </a>
-
-
-
-                <!-- Sell -->
-
-                <a
-                    href="sell.html"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
-                >
-
-                    <svg
-                        class="h-[17px] w-[17px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                    >
-                        <path stroke-linecap="round" d="M12 3v18"/>
-                        <path stroke-linecap="round" d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"/>
-                    </svg>
-
-                    Jual sampah
-
-                </a>
-
-
-
-                <!-- Active -->
-
-                <a
-                    href="activity.html"
-                    class="flex items-center gap-3 rounded-lg bg-[#EAF5EF] px-3 py-2.5 text-[12px] font-semibold text-[#16845B]"
-                >
-
-                    <svg
-                        class="h-[17px] w-[17px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                    >
-                        <path stroke-linecap="round" d="M8 6h12"/>
-                        <path stroke-linecap="round" d="M8 12h12"/>
-                        <path stroke-linecap="round" d="M8 18h12"/>
-                        <path stroke-linecap="round" d="M3 6h.01"/>
-                        <path stroke-linecap="round" d="M3 12h.01"/>
-                        <path stroke-linecap="round" d="M3 18h.01"/>
-                    </svg>
-
-                    Aktivitas
-
-                </a>
-
-            </div>
-
-
-
-            <p class="mb-2 mt-9 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]">
-                Account
-            </p>
-
-
-
-            <!-- Profile -->
-
-            <a
-                href="#"
-                class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
-            >
-
-                <svg
-                    class="h-[17px] w-[17px]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                >
-                    <circle cx="12" cy="8" r="3"/>
-                    <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0"/>
-                </svg>
-
-                Profil
-
-            </a>
-
-        </nav>
-
-
-
-        <!-- User -->
-
-        <div class="border-t border-[#E4E7E3] p-4">
-
-            <div class="flex items-center gap-3">
-
-                <div
-                    class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DDE8E1] text-[11px] font-semibold text-[#347258]"
-                >
-                    BS
-                </div>
-
-                <div class="min-w-0 flex-1">
-
-                    <p class="truncate text-[11px] font-semibold">
-                        Budi Santoso
-                    </p>
-
-                    <p class="truncate text-[10px] text-[#929793]">
-                        Waste Collector
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </aside>
-
-
-
-<!-- =====================================================
-     MAIN
-     ===================================================== -->
-
-<main class="lg:pl-[240px]">
-
-
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
-    <header
-        class="sticky top-0 z-30 border-b border-[#E4E7E3] bg-white/95 backdrop-blur"
-    >
-
-        <div class="flex h-[58px] items-center justify-between px-4 sm:h-[64px] sm:px-6 lg:px-8">
-
-
-            <!-- Mobile logo -->
-
-            <div class="flex items-center gap-2 lg:hidden">
-
-                <div
-                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white"
-                >
-
-                    <svg
-                        class="h-[16px] w-[16px]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                    >
-                        <path stroke-linecap="round" d="M7 7h10l-2-3"/>
-                        <path stroke-linecap="round" d="M17 7l-2 3"/>
-                        <path stroke-linecap="round" d="M17 17H7l2 3"/>
-                        <path stroke-linecap="round" d="M7 17l2-3"/>
-                    </svg>
-
-                </div>
-
-                <span class="text-[15px] font-semibold">
-                    ReValue
-                </span>
-
-            </div>
-
-
-
-            <!-- Desktop title -->
-
-            <div class="hidden lg:block">
-
-                <h1 class="text-[15px] font-semibold">
-                    Aktivitas
-                </h1>
-
-            </div>
-
-
-
-            <!-- Notification -->
-
-            <button
-                class="relative flex h-8 w-8 items-center justify-center rounded-lg text-[#737873] transition hover:bg-[#F5F6F4]"
-            >
-
-                <svg
-                    class="h-[17px] w-[17px]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M18 8a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h15c0-2-2.5-2-2.5-9"
-                    />
-
-                    <path stroke-linecap="round" d="M10 21h4"/>
-                </svg>
-
-                <span class="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#D95C4F]"></span>
-
-            </button>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =====================================================
-         CONTENT
-         ===================================================== -->
-
-    <div class="px-4 pb-28 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
-
-        <div class="mx-auto max-w-[1180px]">
-
-
-            <!-- Page heading -->
-
-            <div>
-
-                <p class="text-[10px] font-medium uppercase tracking-[0.12em] text-[#16845B]">
-                    Riwayat
-                </p>
-
-                <h2 class="mt-1 text-[22px] font-semibold tracking-[-0.03em]">
-                    Aktivitas
-                </h2>
-
-                <p class="mt-1 text-[11px] text-[#858A86]">
-                    Lihat riwayat penjualan dan pickup sampah kamu.
-                </p>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 SUMMARY
-                 ================================================= -->
-
-            <div class="mt-6 grid grid-cols-2 divide-x divide-[#E4E7E3] overflow-hidden rounded-lg border border-[#E4E7E3] bg-white sm:grid-cols-4">
-
-
-                <!-- Total income -->
-
-                <div class="px-4 py-4 sm:px-5">
-
-                    <p class="text-[9px] font-medium text-[#8B908C]">
-                        Total pendapatan
-                    </p>
-
-                    <p class="mt-1 text-[16px] font-semibold tracking-[-0.03em] sm:text-[18px]">
-                        Rp685.000
-                    </p>
-
-                </div>
-
-
-
-                <!-- Transactions -->
-
-                <div class="px-4 py-4 sm:px-5">
-
-                    <p class="text-[9px] font-medium text-[#8B908C]">
-                        Penjualan
-                    </p>
-
-                    <p class="mt-1 text-[16px] font-semibold tracking-[-0.03em] sm:text-[18px]">
-                        18
-                    </p>
-
-                </div>
-
-
-
-                <!-- Weight -->
-
-                <div class="hidden px-5 py-4 sm:block">
-
-                    <p class="text-[9px] font-medium text-[#8B908C]">
-                        Total sampah
-                    </p>
-
-                    <p class="mt-1 text-[18px] font-semibold tracking-[-0.03em]">
-                        248 kg
-                    </p>
-
-                </div>
-
-
-
-                <!-- Pickup -->
-
-                <div class="hidden px-5 py-4 sm:block">
-
-                    <p class="text-[9px] font-medium text-[#8B908C]">
-                        Pickup selesai
-                    </p>
-
-                    <p class="mt-1 text-[18px] font-semibold tracking-[-0.03em]">
-                        12
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 FILTER
-                 ================================================= -->
-
-            <div class="mt-6 flex items-center gap-10 border-b border-[#E4E7E3]">
-
-                <button
-                    class="relative pb-3 text-[10px] font-semibold text-[#16845B]"
-                >
-                    Semua
-
-                    <span
-                        class="absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-[#16845B]"
-                    ></span>
-                </button>
-
-                <button
-                    class="pb-3 text-[10px] font-medium text-[#858A86] transition hover:text-[#16845B]"
-                >
-                    Penjualan
-                </button>
-
-                <button
-                    class="pb-3 text-[10px] font-medium text-[#858A86] transition hover:text-[#16845B]"
-                >
-                    Pickup
-                </button>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 ACTIVITY LIST
-                 ================================================= -->
-
-            <section
-                class="mt-4 overflow-hidden rounded-lg border border-[#E4E7E3] bg-white"
-            >
-
-
-                <!-- Section header -->
-
-                <div class="flex items-center justify-between border-b border-[#E8EAE8] px-4 py-4 sm:px-5">
-
-                    <div>
-
-                        <h3 class="text-[12px] font-semibold">
-                            Aktivitas terbaru
-                        </h3>
-
-                        <p class="mt-0.5 text-[9px] text-[#858A86]">
-                            Transaksi yang kamu lakukan.
-                        </p>
-
-                    </div>
-
-                    <span class="text-[8px] text-[#969B97]">
-                        5 aktivitas
-                    </span>
-
-                </div>
-
-
-
-                <!-- Activity 1 -->
-
-                <div class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5">
-
-                    <div
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EAF5EF] text-[#16845B]"
-                    >
-
-                        <svg
-                            class="h-[17px] w-[17px]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <path stroke-linecap="round" d="M12 3v18"/>
-                            <path stroke-linecap="round" d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"/>
-                        </svg>
-
-                    </div>
-
-
-                    <div class="min-w-0 flex-1">
-
-                        <div class="flex items-start justify-between gap-3">
-
-                            <div class="min-w-0">
-
-                                <p class="truncate text-[10px] font-semibold">
-                                    Penjualan Plastik (PET)
-                                </p>
-
-                                <p class="mt-0.5 text-[8px] text-[#858A86]">
-                                    15 kg · Bank Sampah Hijau
-                                </p>
-
-                            </div>
-
-                            <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
-                                +Rp60.000
-                            </p>
-
-                        </div>
-
-                        <div class="mt-1.5 flex items-center gap-2">
-
-                            <span class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]">
-                                Selesai
-                            </span>
-
-                            <span class="text-[8px] text-[#A0A5A1]">
-                                Hari ini, 10:24
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Activity 2 -->
-
-                <div class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5">
-
-                    <div
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF4E8] text-[#A66B32]"
-                    >
-
-                        <svg
-                            class="h-[17px] w-[17px]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M4 7h16M6 7v12h12V7M9 7V4h6v3"
-                            />
-
-                            <path stroke-linecap="round" d="M9 11h6"/>
-                            <path stroke-linecap="round" d="M9 15h6"/>
-                        </svg>
-
-                    </div>
-
-
-                    <div class="min-w-0 flex-1">
-
-                        <div class="flex items-start justify-between gap-3">
-
-                            <div class="min-w-0">
-
-                                <p class="truncate text-[10px] font-semibold">
-                                    Penjualan Kardus
-                                </p>
-
-                                <p class="mt-0.5 text-[8px] text-[#858A86]">
-                                    20 kg · Daur Ulang Bersama
-                                </p>
-
-                            </div>
-
-                            <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
-                                +Rp50.000
-                            </p>
-
-                        </div>
-
-                        <div class="mt-1.5 flex items-center gap-2">
-
-                            <span class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]">
-                                Selesai
-                            </span>
-
-                            <span class="text-[8px] text-[#A0A5A1]">
-                                7 Agu, 14:12
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Activity 3 -->
-
-                <div class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5">
-
-                    <div
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EEF3F8] text-[#54708A]"
-                    >
-
-                        <svg
-                            class="h-[17px] w-[17px]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3 17h2l2-8h10l2 8h2"
-                            />
-
-                            <circle cx="7" cy="18" r="2"/>
-                            <circle cx="17" cy="18" r="2"/>
-
-                            <path stroke-linecap="round" d="M9 9V6h6v3"/>
-                        </svg>
-
-                    </div>
-
-
-                    <div class="min-w-0 flex-1">
-
-                        <div class="flex items-start justify-between gap-3">
-
-                            <div class="min-w-0">
-
-                                <p class="truncate text-[10px] font-semibold">
-                                    Pickup selesai
-                                </p>
-
-                                <p class="mt-0.5 text-[8px] text-[#858A86]">
-                                    Warung Makan Bu Sari · 8 kg
-                                </p>
-
-                            </div>
-
-                            <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
-                                +Rp32.000
-                            </p>
-
-                        </div>
-
-                        <div class="mt-1.5 flex items-center gap-2">
-
-                            <span class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]">
-                                Selesai
-                            </span>
-
-                            <span class="text-[8px] text-[#A0A5A1]">
-                                6 Agu, 11:45
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Activity 4 -->
-
-                <div class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5">
-
-                    <div
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F1EFF8] text-[#776A9A]"
-                    >
-
-                        <svg
-                            class="h-[17px] w-[17px]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m14 3-3 7h5l-6 11 1-8H7l7-10Z"
-                            />
-                        </svg>
-
-                    </div>
-
-
-                    <div class="min-w-0 flex-1">
-
-                        <div class="flex items-start justify-between gap-3">
-
-                            <div class="min-w-0">
-
-                                <p class="truncate text-[10px] font-semibold">
-                                    Penjualan Logam
-                                </p>
-
-                                <p class="mt-0.5 text-[8px] text-[#858A86]">
-                                    10 kg · Bank Sampah Mandiri
-                                </p>
-
-                            </div>
-
-                            <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
-                                +Rp80.000
-                            </p>
-
-                        </div>
-
-                        <div class="mt-1.5 flex items-center gap-2">
-
-                            <span class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]">
-                                Selesai
-                            </span>
-
-                            <span class="text-[8px] text-[#A0A5A1]">
-                                5 Agu, 16:20
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Activity 5 -->
-
-                <div class="flex items-center gap-3 px-4 py-4 sm:px-5">
-
-                    <div
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F3F4F2] text-[#737873]"
-                    >
-
-                        <svg
-                            class="h-[17px] w-[17px]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                d="M8 6h12"
-                            />
-
-                            <path
-                                stroke-linecap="round"
-                                d="M8 12h12"
-                            />
-
-                            <path
-                                stroke-linecap="round"
-                                d="M8 18h12"
-                            />
-
-                            <path
-                                stroke-linecap="round"
-                                d="M3 6h.01"
-                            />
-
-                            <path
-                                stroke-linecap="round"
-                                d="M3 12h.01"
-                            />
-
-                            <path
-                                stroke-linecap="round"
-                                d="M3 18h.01"
-                            />
-                        </svg>
-
-                    </div>
-
-
-                    <div class="min-w-0 flex-1">
-
-                        <div class="flex items-start justify-between gap-3">
-
-                            <div class="min-w-0">
-
-                                <p class="truncate text-[10px] font-semibold">
-                                    Penjualan Kertas
-                                </p>
-
-                                <p class="mt-0.5 text-[8px] text-[#858A86]">
-                                    12 kg · Bank Sampah Hijau
-                                </p>
-
-                            </div>
-
-                            <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
-                                +Rp24.000
-                            </p>
-
-                        </div>
-
-                        <div class="mt-1.5 flex items-center gap-2">
-
-                            <span class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]">
-                                Selesai
-                            </span>
-
-                            <span class="text-[8px] text-[#A0A5A1]">
-                                4 Agu, 09:18
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 MONTHLY NOTE
-                 ================================================= -->
-
-            <div
-                class="mt-4 flex items-start gap-3 rounded-lg border border-[#DDEBE3] bg-[#F1F8F4] px-4 py-3.5"
-            >
-
-                <div class="mt-0.5 shrink-0 text-[#16845B]">
-
-                    <svg
-                        class="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                    >
-                        <circle cx="12" cy="12" r="9"/>
-                        <path stroke-linecap="round" d="M12 10v6"/>
-                        <path stroke-linecap="round" d="M12 7h.01"/>
-                    </svg>
-
-                </div>
-
-
-                <div>
-
-                    <p class="text-[9px] font-semibold">
-                        Pendapatan bulan ini
-                    </p>
-
-                    <p class="mt-0.5 text-[9px] leading-relaxed text-[#59635D]">
-                        Kamu sudah mendapatkan
-                        <span class="font-semibold text-[#16845B]">
-                            Rp685.000
-                        </span>
-                        dari 18 transaksi.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-
-<!-- =====================================================
-     MOBILE BOTTOM NAV
-     ===================================================== -->
-
-<nav
-    class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E4E7E3] bg-white/95 backdrop-blur lg:hidden"
->
-
-    <div class="mx-auto flex h-[62px] max-w-md items-center justify-around px-2">
-
-
-        <!-- Home -->
-
-        <a
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <nav class="flex-1 px-3 py-6">
+        <p
+          class="mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]"
+        >
+          Main
+        </p>
+
+        <div class="space-y-0.5">
+          <!-- Dashboard -->
+
+          <a
             href="dashboard.html"
-            class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
-        >
-
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+          >
             <svg
-                class="h-[18px] w-[18px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
             >
-                <path stroke-linecap="round" d="M3 11.5 12 4l9 7.5"/>
-                <path stroke-linecap="round" d="M5.5 10.5V20h13v-9.5"/>
-                <path stroke-linecap="round" d="M9.5 20v-5h5v5"/>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 11.5 12 4l9 7.5"
+              />
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.5 10.5V20h13v-9.5"
+              />
+
+              <path stroke-linecap="round" d="M9.5 20v-5h5v5" />
             </svg>
 
-            <span class="text-[8px] font-medium">
-                Beranda
-            </span>
+            Beranda
+          </a>
 
-        </a>
+          <!-- Find -->
 
-
-
-        <!-- Find -->
-
-        <a
+          <a
             href="find.html"
-            class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
-        >
-
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+          >
             <svg
-                class="h-[18px] w-[18px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
             >
-                <circle cx="11" cy="11" r="6.5"/>
-                <path stroke-linecap="round" d="m16 16 4.5 4.5"/>
+              <circle cx="11" cy="11" r="6.5" />
+              <path stroke-linecap="round" d="m16 16 4.5 4.5" />
             </svg>
 
-            <span class="text-[8px] font-medium">
-                Cari
-            </span>
+            Cari sampah
+          </a>
 
-        </a>
+          <!-- Sell -->
 
-
-
-        <!-- Sell -->
-
-        <a
+          <a
             href="sell.html"
-            class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
-        >
-
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
+          >
             <svg
-                class="h-[18px] w-[18px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
             >
-                <path stroke-linecap="round" d="M12 3v18"/>
-                <path stroke-linecap="round" d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"/>
+              <path stroke-linecap="round" d="M12 3v18" />
+              <path
+                stroke-linecap="round"
+                d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
+              />
             </svg>
 
-            <span class="text-[8px] font-medium">
-                Jual
-            </span>
+            Jual sampah
+          </a>
 
-        </a>
+          <!-- Active -->
 
-
-
-        <!-- Activity ACTIVE -->
-
-        <a
+          <a
             href="activity.html"
-            class="flex w-16 flex-col items-center gap-1 text-[#16845B]"
-        >
-
+            class="flex items-center gap-3 rounded-lg bg-[#EAF5EF] px-3 py-2.5 text-[12px] font-semibold text-[#16845B]"
+          >
             <svg
-                class="h-[18px] w-[18px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
             >
-                <path stroke-linecap="round" d="M8 6h12"/>
-                <path stroke-linecap="round" d="M8 12h12"/>
-                <path stroke-linecap="round" d="M8 18h12"/>
-                <path stroke-linecap="round" d="M3 6h.01"/>
-                <path stroke-linecap="round" d="M3 12h.01"/>
-                <path stroke-linecap="round" d="M3 18h.01"/>
+              <path stroke-linecap="round" d="M8 6h12" />
+              <path stroke-linecap="round" d="M8 12h12" />
+              <path stroke-linecap="round" d="M8 18h12" />
+              <path stroke-linecap="round" d="M3 6h.01" />
+              <path stroke-linecap="round" d="M3 12h.01" />
+              <path stroke-linecap="round" d="M3 18h.01" />
             </svg>
 
-            <span class="text-[8px] font-semibold">
-                Aktivitas
-            </span>
+            Aktivitas
+          </a>
+        </div>
 
-        </a>
-
-
+        <p
+          class="mb-2 mt-9 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9AA09C]"
+        >
+          Account
+        </p>
 
         <!-- Profile -->
 
         <a
-            href="#"
-            class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+          href="#"
+          class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[12px] font-medium text-[#737873] transition hover:bg-[#F5F6F4] hover:text-[#202421]"
         >
+          <svg
+            class="h-[17px] w-[17px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <circle cx="12" cy="8" r="3" />
+            <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0" />
+          </svg>
 
+          Profil
+        </a>
+      </nav>
+
+      <!-- User -->
+
+      <div class="border-t border-[#E4E7E3] p-4">
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DDE8E1] text-[11px] font-semibold text-[#347258]"
+          >
+            BS
+          </div>
+
+          <div class="min-w-0 flex-1">
+            <p class="truncate text-[11px] font-semibold">Budi Santoso</p>
+
+            <p class="truncate text-[10px] text-[#929793]">Waste Collector</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+    <main class="lg:pl-[240px]">
+      <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+      <header
+        class="sticky top-0 z-30 border-b border-[#E4E7E3] bg-white/95 backdrop-blur"
+      >
+        <div
+          class="flex h-[58px] items-center justify-between px-4 sm:h-[64px] sm:px-6 lg:px-8"
+        >
+          <!-- Mobile logo -->
+
+          <div class="flex items-center gap-2 lg:hidden">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#16845B] text-white"
+            >
+              <svg
+                class="h-[16px] w-[16px]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path stroke-linecap="round" d="M7 7h10l-2-3" />
+                <path stroke-linecap="round" d="M17 7l-2 3" />
+                <path stroke-linecap="round" d="M17 17H7l2 3" />
+                <path stroke-linecap="round" d="M7 17l2-3" />
+              </svg>
+            </div>
+
+            <span class="text-[15px] font-semibold"> ReValue </span>
+          </div>
+
+          <!-- Desktop title -->
+
+          <div class="hidden lg:block">
+            <h1 class="text-[15px] font-semibold">Aktivitas</h1>
+          </div>
+
+          <!-- Notification -->
+
+          <button
+            class="relative flex h-8 w-8 items-center justify-center rounded-lg text-[#737873] transition hover:bg-[#F5F6F4]"
+          >
             <svg
-                class="h-[18px] w-[18px]"
+              class="h-[17px] w-[17px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 8a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h15c0-2-2.5-2-2.5-9"
+              />
+
+              <path stroke-linecap="round" d="M10 21h4" />
+            </svg>
+
+            <span
+              class="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#D95C4F]"
+            ></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- =====================================================
+         CONTENT
+         ===================================================== -->
+
+      <div class="px-4 pb-28 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
+        <div class="mx-auto max-w-[1180px]">
+          <!-- Page heading -->
+
+          <div>
+            <p
+              class="text-[10px] font-medium uppercase tracking-[0.12em] text-[#16845B]"
+            >
+              Riwayat
+            </p>
+
+            <h2 class="mt-1 text-[22px] font-semibold tracking-[-0.03em]">
+              Aktivitas
+            </h2>
+
+            <p class="mt-1 text-[11px] text-[#858A86]">
+              Lihat riwayat penjualan dan pickup sampah kamu.
+            </p>
+          </div>
+
+          <!-- =================================================
+                 SUMMARY
+                 ================================================= -->
+
+          <div
+            class="mt-6 grid grid-cols-2 divide-x divide-[#E4E7E3] overflow-hidden rounded-lg border border-[#E4E7E3] bg-white sm:grid-cols-4"
+          >
+            <!-- Total income -->
+
+            <div class="px-4 py-4 sm:px-5">
+              <p class="text-[9px] font-medium text-[#8B908C]">
+                Total pendapatan
+              </p>
+
+              <p
+                class="mt-1 text-[16px] font-semibold tracking-[-0.03em] sm:text-[18px]"
+              >
+                Rp685.000
+              </p>
+            </div>
+
+            <!-- Transactions -->
+
+            <div class="px-4 py-4 sm:px-5">
+              <p class="text-[9px] font-medium text-[#8B908C]">Penjualan</p>
+
+              <p
+                class="mt-1 text-[16px] font-semibold tracking-[-0.03em] sm:text-[18px]"
+              >
+                18
+              </p>
+            </div>
+
+            <!-- Weight -->
+
+            <div class="hidden px-5 py-4 sm:block">
+              <p class="text-[9px] font-medium text-[#8B908C]">Total sampah</p>
+
+              <p class="mt-1 text-[18px] font-semibold tracking-[-0.03em]">
+                248 kg
+              </p>
+            </div>
+
+            <!-- Pickup -->
+
+            <div class="hidden px-5 py-4 sm:block">
+              <p class="text-[9px] font-medium text-[#8B908C]">
+                Pickup selesai
+              </p>
+
+              <p class="mt-1 text-[18px] font-semibold tracking-[-0.03em]">
+                12
+              </p>
+            </div>
+          </div>
+
+          <!-- =================================================
+                 FILTER
+                 ================================================= -->
+
+          <div class="mt-6 flex items-center gap-10 border-b border-[#E4E7E3]">
+            <button
+              class="relative pb-3 text-[10px] font-semibold text-[#16845B]"
+            >
+              Semua
+
+              <span
+                class="absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-[#16845B]"
+              ></span>
+            </button>
+
+            <button
+              class="pb-3 text-[10px] font-medium text-[#858A86] transition hover:text-[#16845B]"
+            >
+              Penjualan
+            </button>
+
+            <button
+              class="pb-3 text-[10px] font-medium text-[#858A86] transition hover:text-[#16845B]"
+            >
+              Pickup
+            </button>
+          </div>
+
+          <!-- =================================================
+                 ACTIVITY LIST
+                 ================================================= -->
+
+          <section
+            class="mt-4 overflow-hidden rounded-lg border border-[#E4E7E3] bg-white"
+          >
+            <!-- Section header -->
+
+            <div
+              class="flex items-center justify-between border-b border-[#E8EAE8] px-4 py-4 sm:px-5"
+            >
+              <div>
+                <h3 class="text-[12px] font-semibold">Aktivitas terbaru</h3>
+
+                <p class="mt-0.5 text-[9px] text-[#858A86]">
+                  Transaksi yang kamu lakukan.
+                </p>
+              </div>
+
+              <span class="text-[8px] text-[#969B97]"> 5 aktivitas </span>
+            </div>
+
+            <!-- Activity 1 -->
+
+            <div
+              class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5"
+            >
+              <div
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EAF5EF] text-[#16845B]"
+              >
+                <svg
+                  class="h-[17px] w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path stroke-linecap="round" d="M12 3v18" />
+                  <path
+                    stroke-linecap="round"
+                    d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
+                  />
+                </svg>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="truncate text-[10px] font-semibold">
+                      Penjualan Plastik (PET)
+                    </p>
+
+                    <p class="mt-0.5 text-[8px] text-[#858A86]">
+                      15 kg · Bank Sampah Hijau
+                    </p>
+                  </div>
+
+                  <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
+                    +Rp60.000
+                  </p>
+                </div>
+
+                <div class="mt-1.5 flex items-center gap-2">
+                  <span
+                    class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]"
+                  >
+                    Selesai
+                  </span>
+
+                  <span class="text-[8px] text-[#A0A5A1]">
+                    Hari ini, 10:24
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 2 -->
+
+            <div
+              class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5"
+            >
+              <div
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF4E8] text-[#A66B32]"
+              >
+                <svg
+                  class="h-[17px] w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 7h16M6 7v12h12V7M9 7V4h6v3"
+                  />
+
+                  <path stroke-linecap="round" d="M9 11h6" />
+                  <path stroke-linecap="round" d="M9 15h6" />
+                </svg>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="truncate text-[10px] font-semibold">
+                      Penjualan Kardus
+                    </p>
+
+                    <p class="mt-0.5 text-[8px] text-[#858A86]">
+                      20 kg · Daur Ulang Bersama
+                    </p>
+                  </div>
+
+                  <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
+                    +Rp50.000
+                  </p>
+                </div>
+
+                <div class="mt-1.5 flex items-center gap-2">
+                  <span
+                    class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]"
+                  >
+                    Selesai
+                  </span>
+
+                  <span class="text-[8px] text-[#A0A5A1]"> 7 Agu, 14:12 </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 3 -->
+
+            <div
+              class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5"
+            >
+              <div
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EEF3F8] text-[#54708A]"
+              >
+                <svg
+                  class="h-[17px] w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 17h2l2-8h10l2 8h2"
+                  />
+
+                  <circle cx="7" cy="18" r="2" />
+                  <circle cx="17" cy="18" r="2" />
+
+                  <path stroke-linecap="round" d="M9 9V6h6v3" />
+                </svg>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="truncate text-[10px] font-semibold">
+                      Pickup selesai
+                    </p>
+
+                    <p class="mt-0.5 text-[8px] text-[#858A86]">
+                      Warung Makan Bu Sari · 8 kg
+                    </p>
+                  </div>
+
+                  <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
+                    +Rp32.000
+                  </p>
+                </div>
+
+                <div class="mt-1.5 flex items-center gap-2">
+                  <span
+                    class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]"
+                  >
+                    Selesai
+                  </span>
+
+                  <span class="text-[8px] text-[#A0A5A1]"> 6 Agu, 11:45 </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 4 -->
+
+            <div
+              class="flex items-center gap-3 border-b border-[#ECEEEC] px-4 py-4 sm:px-5"
+            >
+              <div
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F1EFF8] text-[#776A9A]"
+              >
+                <svg
+                  class="h-[17px] w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m14 3-3 7h5l-6 11 1-8H7l7-10Z"
+                  />
+                </svg>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="truncate text-[10px] font-semibold">
+                      Penjualan Logam
+                    </p>
+
+                    <p class="mt-0.5 text-[8px] text-[#858A86]">
+                      10 kg · Bank Sampah Mandiri
+                    </p>
+                  </div>
+
+                  <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
+                    +Rp80.000
+                  </p>
+                </div>
+
+                <div class="mt-1.5 flex items-center gap-2">
+                  <span
+                    class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]"
+                  >
+                    Selesai
+                  </span>
+
+                  <span class="text-[8px] text-[#A0A5A1]"> 5 Agu, 16:20 </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 5 -->
+
+            <div class="flex items-center gap-3 px-4 py-4 sm:px-5">
+              <div
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F3F4F2] text-[#737873]"
+              >
+                <svg
+                  class="h-[17px] w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path stroke-linecap="round" d="M8 6h12" />
+
+                  <path stroke-linecap="round" d="M8 12h12" />
+
+                  <path stroke-linecap="round" d="M8 18h12" />
+
+                  <path stroke-linecap="round" d="M3 6h.01" />
+
+                  <path stroke-linecap="round" d="M3 12h.01" />
+
+                  <path stroke-linecap="round" d="M3 18h.01" />
+                </svg>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="truncate text-[10px] font-semibold">
+                      Penjualan Kertas
+                    </p>
+
+                    <p class="mt-0.5 text-[8px] text-[#858A86]">
+                      12 kg · Bank Sampah Hijau
+                    </p>
+                  </div>
+
+                  <p class="shrink-0 text-[10px] font-semibold text-[#16845B]">
+                    +Rp24.000
+                  </p>
+                </div>
+
+                <div class="mt-1.5 flex items-center gap-2">
+                  <span
+                    class="rounded-full bg-[#EAF5EF] px-2 py-0.5 text-[7px] font-medium text-[#16845B]"
+                  >
+                    Selesai
+                  </span>
+
+                  <span class="text-[8px] text-[#A0A5A1]"> 4 Agu, 09:18 </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 MONTHLY NOTE
+                 ================================================= -->
+
+          <div
+            class="mt-4 flex items-start gap-3 rounded-lg border border-[#DDEBE3] bg-[#F1F8F4] px-4 py-3.5"
+          >
+            <div class="mt-0.5 shrink-0 text-[#16845B]">
+              <svg
+                class="h-4 w-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.7"
-            >
-                <circle cx="12" cy="8" r="3"/>
-                <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0"/>
-            </svg>
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" d="M12 10v6" />
+                <path stroke-linecap="round" d="M12 7h.01" />
+              </svg>
+            </div>
 
-            <span class="text-[8px] font-medium">
-                Profil
-            </span>
+            <div>
+              <p class="text-[9px] font-semibold">Pendapatan bulan ini</p>
 
+              <p class="mt-0.5 text-[9px] leading-relaxed text-[#59635D]">
+                Kamu sudah mendapatkan
+                <span class="font-semibold text-[#16845B]"> Rp685.000 </span>
+                dari 18 transaksi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================
+     MOBILE BOTTOM NAV
+     ===================================================== -->
+
+    <nav
+      class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E4E7E3] bg-white/95 backdrop-blur lg:hidden"
+    >
+      <div
+        class="mx-auto flex h-[62px] max-w-md items-center justify-around px-2"
+      >
+        <!-- Home -->
+
+        <a
+          href="dashboard.html"
+          class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+        >
+          <svg
+            class="h-[18px] w-[18px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path stroke-linecap="round" d="M3 11.5 12 4l9 7.5" />
+            <path stroke-linecap="round" d="M5.5 10.5V20h13v-9.5" />
+            <path stroke-linecap="round" d="M9.5 20v-5h5v5" />
+          </svg>
+
+          <span class="text-[8px] font-medium"> Beranda </span>
         </a>
 
-    </div>
+        <!-- Find -->
 
-</nav>
+        <a
+          href="find.html"
+          class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+        >
+          <svg
+            class="h-[18px] w-[18px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <circle cx="11" cy="11" r="6.5" />
+            <path stroke-linecap="round" d="m16 16 4.5 4.5" />
+          </svg>
 
+          <span class="text-[8px] font-medium"> Cari </span>
+        </a>
 
-</body>
+        <!-- Sell -->
+
+        <a
+          href="sell.html"
+          class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+        >
+          <svg
+            class="h-[18px] w-[18px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path stroke-linecap="round" d="M12 3v18" />
+            <path
+              stroke-linecap="round"
+              d="M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
+            />
+          </svg>
+
+          <span class="text-[8px] font-medium"> Jual </span>
+        </a>
+
+        <!-- Activity ACTIVE -->
+
+        <a
+          href="activity.html"
+          class="flex w-16 flex-col items-center gap-1 text-[#16845B]"
+        >
+          <svg
+            class="h-[18px] w-[18px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path stroke-linecap="round" d="M8 6h12" />
+            <path stroke-linecap="round" d="M8 12h12" />
+            <path stroke-linecap="round" d="M8 18h12" />
+            <path stroke-linecap="round" d="M3 6h.01" />
+            <path stroke-linecap="round" d="M3 12h.01" />
+            <path stroke-linecap="round" d="M3 18h.01" />
+          </svg>
+
+          <span class="text-[8px] font-semibold"> Aktivitas </span>
+        </a>
+
+        <!-- Profile -->
+
+        <a
+          href="#"
+          class="flex w-16 flex-col items-center gap-1 text-[#8A908B]"
+        >
+          <svg
+            class="h-[18px] w-[18px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <circle cx="12" cy="8" r="3" />
+            <path stroke-linecap="round" d="M5 21a7 7 0 0 1 14 0" />
+          </svg>
+
+          <span class="text-[8px] font-medium"> Profil </span>
+        </a>
+      </div>
+    </nav>
+  </body>
 </html>

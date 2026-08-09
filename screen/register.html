@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ReValue — Register</title>
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CLI -->
+    <link rel="stylesheet" href="../../src/output.css" />
+
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f8faf8;
+      }
+
+      .grid-bg {
+        background-image: linear-gradient(
+            rgba(22, 132, 91, 0.045) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(22, 132, 91, 0.045) 1px, transparent 1px);
+        background-size: 34px 34px;
+      }
+
+      .reveal {
+        animation: reveal 0.65s ease-out both;
+      }
+
+      .reveal-delay {
+        animation: reveal 0.65s 0.15s ease-out both;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .register-button {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.25s ease;
+      }
+
+      .register-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          110deg,
+          transparent 25%,
+          rgba(255, 255, 255, 0.18) 50%,
+          transparent 75%
+        );
+        transform: translateX(-120%);
+        transition: transform 0.6s ease;
+      }
+
+      .register-button:hover::before {
+        transform: translateX(120%);
+      }
+
+      .register-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(22, 132, 91, 0.18);
+      }
+
+      .register-button:hover svg {
+        transform: translateX(4px);
+      }
+
+      .role-card {
+        transition: all 0.25s ease;
+      }
+
+      .role-card:hover {
+        transform: translateY(-2px);
+        border-color: #c9dcd2;
+        background: #f7fbf8;
+      }
+
+      .role-card.active {
+        border-color: #16845b;
+        background: #f3faf6;
+        box-shadow: 0 0 0 2px rgba(22, 132, 91, 0.08);
+      }
+
+      .field {
+        transition: all 0.2s ease;
+      }
+
+      .field:hover {
+        border-color: #c9dcd2;
+        background: #ffffff;
+      }
+
+      .small-link {
+        transition: all 0.2s ease;
+      }
+
+      .small-link:hover {
+        transform: translateX(2px);
+      }
+
+      .toast {
+        transform: translateY(120px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <main
+      class="grid-bg relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-8 sm:px-6"
+    >
+      <!-- Background glow -->
+
+      <div
+        class="pointer-events-none absolute left-[18%] top-[18%] h-40 w-40 rounded-full bg-[#EAF5EF] blur-3xl"
+      ></div>
+
+      <div
+        class="pointer-events-none absolute bottom-[10%] right-[18%] h-48 w-48 rounded-full bg-[#FFF1E8] blur-3xl"
+      ></div>
+
+      <!-- =================================================
+             REGISTER WRAPPER
+             ================================================= -->
+
+      <div class="relative z-20 w-full max-w-[420px]">
+        <!-- Top decoration -->
+
+        <div class="reveal mb-5 flex items-center justify-center gap-2">
+          <div class="h-px w-10 bg-[#DDE1DE]"></div>
+
+          <div
+            class="flex items-center rounded-full border border-[#DDE1DE] bg-white/80 px-3 py-1.5 shadow-sm backdrop-blur"
+          >
+            <span
+              class="text-[8px] font-semibold uppercase tracking-[0.12em] text-[#737873]"
+            >
+              Buat Akun Baru
+            </span>
+          </div>
+
+          <div class="h-px w-10 bg-[#DDE1DE]"></div>
+        </div>
+
+        <!-- Register Card -->
+
+        <section
+          class="reveal relative overflow-hidden rounded-xl border border-[#E4E7E3] bg-white/95 p-5 shadow-[0_20px_70px_rgba(32,36,33,.08)] backdrop-blur sm:p-7"
+        >
+          <!-- Card Decorations -->
+
+          <div
+            class="pointer-events-none absolute -right-12 -top-12 h-28 w-28 rounded-full bg-[#EAF5EF]"
+          ></div>
+
+          <div
+            class="pointer-events-none absolute -bottom-16 -left-12 h-32 w-32 rounded-full bg-[#FFF3EB]"
+          ></div>
+
+          <!-- Heading -->
+
+          <div class="relative">
+            <p
+              class="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#16845B]"
+            >
+              Daftar ke ReValue
+            </p>
+
+            <h1
+              class="mt-2 text-[25px] font-semibold tracking-[-0.04em] sm:text-[28px]"
+            >
+              Mulai perjalananmu.
+            </h1>
+
+            <p
+              class="mt-2 max-w-[330px] text-[10px] leading-relaxed text-[#858A86]"
+            >
+              Buat akun dan mulai mengubah sesuatu yang tidak terpakai menjadi
+              bernilai.
+            </p>
+          </div>
+
+          <!-- Form -->
+
+          <form id="registerForm" class="relative mt-6">
+            <!-- Role -->
+
+            <div>
+              <label class="text-[10px] font-semibold text-[#303531]">
+                Daftar sebagai
+              </label>
+
+              <div class="mt-1.5 grid grid-cols-2 gap-2">
+                <!-- Collector -->
+
+                <button
+                  id="collectorRole"
+                  type="button"
+                  class="role-card active rounded-lg border border-[#16845B] bg-[#F3FAF6] p-3 text-left"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#EAF5EF] text-[#16845B]"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3 17h18"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 17V9l7-4 7 4v8"
+                        />
+                        <path stroke-linecap="round" d="M9 17v-4h6v4" />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <p class="text-[9px] font-semibold text-[#303531]">
+                        Collector
+                      </p>
+
+                      <p class="mt-0.5 text-[7px] text-[#858A86]">
+                        Pengumpul sampah
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Seller -->
+
+                <button
+                  id="sellerRole"
+                  type="button"
+                  class="role-card rounded-lg border border-[#E1E5E2] bg-[#FAFBFA] p-3 text-left"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FFF1E8] text-[#D87945]"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4 10h16"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 10v9h14v-9"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m4 10 2-5h12l2 5"
+                        />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <p class="text-[9px] font-semibold text-[#303531]">
+                        Seller
+                      </p>
+
+                      <p class="mt-0.5 text-[7px] text-[#858A86]">
+                        Penjual sampah
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+              <input id="role" type="hidden" value="collector" />
+            </div>
+
+            <!-- Name -->
+
+            <div class="group mt-4">
+              <label
+                for="name"
+                class="text-[10px] font-semibold text-[#303531]"
+              >
+                Nama lengkap
+              </label>
+
+              <div class="relative mt-1.5">
+                <div
+                  class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#9AA09C] transition group-focus-within:text-[#16845B]"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  >
+                    <circle cx="12" cy="8" r="3.5" />
+                    <path
+                      stroke-linecap="round"
+                      d="M5 20c.8-3.4 3.2-5 7-5s6.2 1.6 7 5"
+                    />
+                  </svg>
+                </div>
+
+                <input
+                  id="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  placeholder="Nama lengkap"
+                  class="field h-11 w-full rounded-lg border border-[#DDE1DE] bg-[#FAFBFA] pl-10 pr-3 text-[10px] outline-none placeholder:text-[#B0B5B1] focus:border-[#16845B] focus:bg-white focus:ring-2 focus:ring-[#16845B]/10"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+
+            <div class="group mt-3.5">
+              <label
+                for="email"
+                class="text-[10px] font-semibold text-[#303531]"
+              >
+                Email
+              </label>
+
+              <div class="relative mt-1.5">
+                <div
+                  class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#9AA09C] transition group-focus-within:text-[#16845B]"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path stroke-linecap="round" d="m3 7 9 6 9-6" />
+                  </svg>
+                </div>
+
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="nama@email.com"
+                  class="field h-11 w-full rounded-lg border border-[#DDE1DE] bg-[#FAFBFA] pl-10 pr-3 text-[10px] outline-none placeholder:text-[#B0B5B1] focus:border-[#16845B] focus:bg-white focus:ring-2 focus:ring-[#16845B]/10"
+                />
+              </div>
+            </div>
+
+            <!-- Password -->
+
+            <div class="group mt-3.5">
+              <label
+                for="password"
+                class="text-[10px] font-semibold text-[#303531]"
+              >
+                Password
+              </label>
+
+              <div class="relative mt-1.5">
+                <div
+                  class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#9AA09C] transition group-focus-within:text-[#16845B]"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  >
+                    <rect x="5" y="10" width="14" height="10" rx="2" />
+                    <path stroke-linecap="round" d="M8 10V7a4 4 0 0 1 8 0v3" />
+                  </svg>
+                </div>
+
+                <input
+                  id="password"
+                  type="password"
+                  required
+                  autocomplete="new-password"
+                  placeholder="Buat password"
+                  class="field h-11 w-full rounded-lg border border-[#DDE1DE] bg-[#FAFBFA] pl-10 pr-3 text-[10px] outline-none placeholder:text-[#B0B5B1] focus:border-[#16845B] focus:bg-white focus:ring-2 focus:ring-[#16845B]/10"
+                />
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+
+            <div class="group mt-3.5">
+              <label
+                for="confirmPassword"
+                class="text-[10px] font-semibold text-[#303531]"
+              >
+                Konfirmasi password
+              </label>
+
+              <div class="relative mt-1.5">
+                <div
+                  class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#9AA09C] transition group-focus-within:text-[#16845B]"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  >
+                    <rect x="5" y="10" width="14" height="10" rx="2" />
+                    <path stroke-linecap="round" d="M8 10V7a4 4 0 0 1 8 0v3" />
+                  </svg>
+                </div>
+
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  required
+                  autocomplete="new-password"
+                  placeholder="Ulangi password"
+                  class="field h-11 w-full rounded-lg border border-[#DDE1DE] bg-[#FAFBFA] pl-10 pr-3 text-[10px] outline-none placeholder:text-[#B0B5B1] focus:border-[#16845B] focus:bg-white focus:ring-2 focus:ring-[#16845B]/10"
+                />
+              </div>
+            </div>
+
+            <!-- Terms -->
+
+            <label class="mt-4 flex cursor-pointer items-start gap-2">
+              <input
+                id="terms"
+                type="checkbox"
+                required
+                class="mt-0.5 h-3.5 w-3.5 shrink-0 cursor-pointer accent-[#16845B]"
+              />
+
+              <span class="text-[8px] leading-relaxed text-[#737873]">
+                Saya menyetujui
+                <a href="#" class="font-medium text-[#16845B] hover:underline"
+                  >ketentuan penggunaan</a
+                >
+                dan
+                <a href="#" class="font-medium text-[#16845B] hover:underline"
+                  >kebijakan privasi</a
+                >
+                ReValue.
+              </span>
+            </label>
+
+            <!-- Button -->
+
+            <button
+              id="registerButton"
+              type="submit"
+              class="register-button mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#16845B] text-[10px] font-semibold text-white"
+            >
+              <span id="buttonText"> Daftar ke ReValue </span>
+
+              <svg
+                class="h-3.5 w-3.5 transition-transform duration-300"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path stroke-linecap="round" d="M5 12h13" />
+                <path stroke-linecap="round" d="m13 6 6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+
+          <!-- Login -->
+
+          <div class="relative mt-4 flex items-center justify-center gap-1.5">
+            <span class="text-[8px] text-[#929793]"> Sudah punya akun? </span>
+
+            <a
+              href="login.html"
+              class="small-link text-[8px] font-semibold text-[#16845B]"
+            >
+              Masuk
+            </a>
+          </div>
+        </section>
+
+        <!-- Footer -->
+
+        <p
+          class="reveal-delay mt-5 text-center text-[8px] leading-relaxed text-[#A0A5A1]"
+        >
+          Dengan mendaftar ke ReValue, kamu menyetujui
+          <a href="#" class="text-[#737873] transition hover:text-[#16845B]"
+            >ketentuan penggunaan</a
+          >
+          dan
+          <a href="#" class="text-[#737873] transition hover:text-[#16845B]"
+            >kebijakan privasi</a
+          >.
+        </p>
+      </div>
+    </main>
+
+    <!-- =====================================================
+         SUCCESS TOAST
+         ===================================================== -->
+
+    <div
+      id="successToast"
+      class="toast fixed bottom-5 left-1/2 z-50 w-[calc(100%-32px)] max-w-[360px] -translate-x-1/2 rounded-xl border border-[#DDE8E1] bg-white p-4 shadow-[0_15px_45px_rgba(32,36,33,.14)]"
+    >
+      <div class="flex items-center gap-3">
+        <div
+          class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF5EF] text-[#16845B]"
+        >
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m5 12 4 4L19 6"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <p class="text-[9px] font-semibold">Registrasi berhasil</p>
+
+          <p class="mt-0.5 text-[8px] text-[#858A86]">
+            Akunmu berhasil dibuat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!-- <script>
+      const collectorRole = document.getElementById("collectorRole");
+      const sellerRole = document.getElementById("sellerRole");
+      const roleInput = document.getElementById("role");
+
+      collectorRole.addEventListener("click", function () {
+        roleInput.value = "collector";
+
+        collectorRole.classList.add("active");
+        sellerRole.classList.remove("active");
+      });
+
+      sellerRole.addEventListener("click", function () {
+        roleInput.value = "seller";
+
+        sellerRole.classList.add("active");
+        collectorRole.classList.remove("active");
+      });
+
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirmPassword");
+
+      confirmPassword.addEventListener("input", function () {
+        if (confirmPassword.value === "") {
+          confirmPassword.classList.remove("border-red-400");
+          confirmPassword.classList.remove("border-[#16845B]");
+
+          return;
+        }
+
+        if (password.value === confirmPassword.value) {
+          confirmPassword.classList.remove("border-red-400");
+          confirmPassword.classList.add("border-[#16845B]");
+        } else {
+          confirmPassword.classList.remove("border-[#16845B]");
+          confirmPassword.classList.add("border-red-400");
+        }
+      });
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (password.value !== confirmPassword.value) {
+            confirmPassword.focus();
+            return;
+          }
+
+          const button = document.getElementById("registerButton");
+          const buttonText = document.getElementById("buttonText");
+          const toast = document.getElementById("successToast");
+
+          button.disabled = true;
+          buttonText.textContent = "Membuat akun...";
+
+          setTimeout(function () {
+            buttonText.textContent = "Berhasil";
+
+            toast.classList.add("show");
+
+            setTimeout(function () {
+              window.location.href = "login.html";
+            }, 1800);
+          }, 800);
+        });
+    </script> -->
+
+    <script>
+      // ==== CONFIGURATION ====
+      const API_BASE_URL = "http://localhost:3000";
+
+      // ==== DOM ELEMENTS ====
+      const collectorRole = document.getElementById("collectorRole");
+      const sellerRole = document.getElementById("sellerRole");
+      const roleInput = document.getElementById("role");
+
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+
+      const registerForm = document.getElementById("registerForm");
+      const registerButton = document.getElementById("registerButton");
+      const buttonText = document.getElementById("buttonText");
+      const successToast = document.getElementById("successToast");
+
+      // ==== ROLE SELECTION ====
+      collectorRole.addEventListener("click", () => {
+        roleInput.value = "collector";
+        collectorRole.classList.add("active");
+        sellerRole.classList.remove("active");
+      });
+
+      sellerRole.addEventListener("click", () => {
+        roleInput.value = "seller";
+        sellerRole.classList.add("active");
+        collectorRole.classList.remove("active");
+      });
+
+      // ==== REAL-TIME PASSWORD MATCHING ====
+      function checkPasswordMatch() {
+        if (confirmPasswordInput.value === "") {
+          confirmPasswordInput.classList.remove(
+            "border-red-400",
+            "border-[#16845B]",
+          );
+          return true;
+        }
+
+        if (passwordInput.value === confirmPasswordInput.value) {
+          confirmPasswordInput.classList.remove("border-red-400");
+          confirmPasswordInput.classList.add("border-[#16845B]");
+          return true;
+        } else {
+          confirmPasswordInput.classList.remove("border-[#16845B]");
+          confirmPasswordInput.classList.add("border-red-400");
+          return false;
+        }
+      }
+
+      passwordInput.addEventListener("input", checkPasswordMatch);
+      confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+
+      // ==== TOAST HELPER ====
+      function showToast(title, message, isError = false) {
+        const toastTitle = successToast.querySelector("p.font-semibold");
+        const toastDesc = successToast.querySelector("p.mt-0\\.5");
+        const toastIconWrap = successToast.querySelector("div.flex.h-8.w-8");
+
+        toastTitle.textContent = title;
+        toastDesc.textContent = message;
+
+        if (isError) {
+          toastIconWrap.style.background = "#FDEAEA";
+          toastIconWrap.style.color = "#D14343";
+        } else {
+          toastIconWrap.style.background = "#EAF5EF";
+          toastIconWrap.style.color = "#16845B";
+        }
+
+        successToast.classList.add("show");
+
+        if (isError) {
+          setTimeout(() => successToast.classList.remove("show"), 3000);
+        }
+      }
+
+      // ==== HANDLE REGISTER ====
+      registerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Check Password Match
+        if (!checkPasswordMatch()) {
+          showToast(
+            "Registrasi gagal",
+            "Password dan konfirmasi password tidak cocok.",
+            true,
+          );
+          confirmPasswordInput.focus();
+          return;
+        }
+
+        const payload = {
+          role: roleInput.value,
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          password: passwordInput.value,
+        };
+
+        const originalText = buttonText.textContent;
+        registerButton.disabled = true;
+        buttonText.textContent = "Memproses...";
+
+        try {
+          const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          const result = await res.json();
+
+          if (!result.success) {
+            throw new Error(result.message || "Gagal membuat akun.");
+          }
+
+          // Save user session if returned by API
+          if (result.data) {
+            if (result.data.idToken)
+              localStorage.setItem("idToken", result.data.idToken);
+            if (result.data.uid) localStorage.setItem("uid", result.data.uid);
+            if (result.data.role)
+              localStorage.setItem("role", result.data.role);
+            if (result.data.name)
+              localStorage.setItem("name", result.data.name);
+          }
+
+          buttonText.textContent = "Berhasil";
+          showToast("Registrasi berhasil", "Akunmu berhasil dibuat.");
+
+          // Redirect based on selected role
+          setTimeout(() => {
+            if (payload.role === "seller") {
+              window.location.href = "..screen/seller/dasboard.html";
+            } else {
+              window.location.href = "..screen/collector/dashboard.html";
+            }
+          }, 1500);
+        } catch (err) {
+          showToast("Registrasi gagal", err.message, true);
+          registerButton.disabled = false;
+          buttonText.textContent = originalText;
+        }
+      });
+    </script>
+  </body>
+</html>
